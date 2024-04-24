@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Cinzel:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Cinzel:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ------- Reset ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+/* ------------------- */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+header {
+  padding: 10px 0;
+}
+
+#logo {
+  display: block;
+  margin: 10px auto;
+  width: auto;
+  height: 110px;
+}
+
+/* ----- Menu Style ----- */
+nav {
+  padding: 20px 0;
+  border-top: 1px solid rgb(188, 188, 188);
+  border-bottom: 1px solid rgb(188, 188, 188);
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+@media (max-width: 500px) {
+  nav li {
+    padding: 0 10px;
+  }
+}
+
+nav a {
+  position: relative;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+nav a::after {
+  content: " ";
+  position: absolute;
+  top: calc(30% + 1.15rem);
+  left: 0;
+  width: 100%;
+  border-top-style: solid;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+nav a:link {
+  color: rgb(0, 0, 0);
+}
+
+nav a:visited {
+  color: rgb(38, 135, 127);
+}
+
+nav a:visited::after {
+  transform: scaleX(1);
+}
+
+nav a:hover {
+  color: rgb(38, 135, 127);
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+nav a:active {
+  color: rgb(38, 135, 127);
+}
+
+/* ----- Main Section Style ----- */
+main {
+  flex: 1 0 auto;
+  background-color: rgb(247, 247, 247);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article {
+  flex: 1 1 280px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+  article:nth-child(1) {
+    flex: 1 0 100%;
+  }
+}
+
+/* ----- Promo Banner Style ----- */
+.promo-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-image: url("./assets/modern-garden-design-with-terrace-in-top-view.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo-text-box {
+  margin: auto 0;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(9, 30, 21, 0.3);
+}
+
+.promo-text-box p {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+  word-spacing: 5px;
+}
+
+.promo-text-box > p:first-child {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.promo-text-box > p:last-child {
+  margin-top: 30px;
+}
+
+.book-consultation-btn {
+  appearance: none;
+  padding: 10px 40px;
+  border: 1px solid white;
+  background-color: rgba(9, 30, 21, 0.4);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: white;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.book-consultation-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(9, 30, 21);
+}
+
+@media (max-width: 900px) {
+  .promo-text-box p {
+    font-size: 1.3rem;
+  }
+
+  .promo-text-box > p:first-child {
+    font-size: 2rem;
+  }
+
+  .book-consultation-btn {
+    padding: 8px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ----- Articles Style ----- */
+.articles-container {
+  justify-content: center;
+  gap: 40px;
+  width: 80vw;
+  margin: 100px auto;
+}
+
+.articles-container > article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  text-align: justify;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(219 219 219);
+  border-radius: 10px;
+}
+
+.articles-container article:hover {
+  color: rgb(38, 135, 127);
+  cursor: pointer;
+}
+
+.article-image {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.articles-container h2,
+.articles-container p,
+.articles-container address {
+  margin: 0 30px;
+}
+
+.articles-container p,
+.articles-container address {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+/* ----- Footer Style ----- */
+footer {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10vw;
+  background-color: rgb(9, 30, 21);
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+
+.logo-footer {
+  width: 30px;
+  height: auto;
+}
